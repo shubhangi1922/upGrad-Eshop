@@ -11,7 +11,7 @@ export const doLogin = (email, password) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/auth/signin', {
+	fetch('http://localhost:3001/api/v1/auth', {
 		method: 'POST',
 		body: JSON.stringify({
 			username: email,
@@ -63,7 +63,7 @@ export const doSignup = (requestJson) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/auth/signup', {
+	fetch('http://localhost:3001/api/v1/users', {
 		method: 'POST',
 		body: JSON.stringify(requestJson),
 		headers: {

@@ -9,7 +9,7 @@ export const fetchAllCategories = (accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/products/categories', {
+	fetch('http://localhost:3001/api/v1/products/categories', {
 		method: 'GET',
 		headers: {
 			'x-auth-token': accessToken,

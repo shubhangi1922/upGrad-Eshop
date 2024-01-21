@@ -9,7 +9,7 @@ export const fetchAllAddresses = (accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/addresses', {
+	fetch('http://localhost:3001/api/v1/addresses', {
 		method: 'GET',
 		headers: {
 			'x-auth-token': accessToken,
@@ -51,7 +51,7 @@ export const createAddress = (requestJson, accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/addresses', {
+	fetch('http://localhost:3001/api/v1/addresses', {
 		method: 'POST',
 		body: JSON.stringify(requestJson),
 		headers: {

@@ -9,7 +9,7 @@ export const createOrder = (requestJson, accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/orders', {
+	fetch('http://localhost:3001/api/v1/orders', {
 		method: 'POST',
 		body: JSON.stringify(requestJson),
 		headers: {

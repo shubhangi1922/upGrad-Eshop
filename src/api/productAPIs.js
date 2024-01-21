@@ -9,7 +9,7 @@ export const fetchAllProducts = (accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/products', {
+	fetch('http://localhost:3001/api/v1/products', {
 		method: 'GET',
 		headers: {
 			'x-auth-token': accessToken,
@@ -46,7 +46,7 @@ export const createProduct = (requestJson, accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/products', {
+	fetch('http://localhost:3001/api/v1/products', {
 		method: 'POST',
 		body: JSON.stringify(requestJson),
 		headers: {
@@ -89,7 +89,7 @@ export const deleteProduct = (id, accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/products/'+id, {
+	fetch('http://localhost:3001/api/v1/products/'+id, {
 		method: 'DELETE',
 		headers: {
 			'x-auth-token': accessToken,
@@ -125,7 +125,7 @@ export const modifyProduct = (requestJson, accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/products/' + requestJson.id, {
+	fetch('http://localhost:3001/api/v1/products/' + requestJson.id, {
 		method: 'PUT',
 		body: JSON.stringify(requestJson),
 		headers: {
@@ -168,7 +168,7 @@ export const viewProduct = (id, accessToken) => {
 		promiseResolveRef = resolve;
 		promiseRejectRef = reject;
 	});
-	fetch('http://localhost:8080/api/products/'+id, {
+	fetch('http://localhost:3001/api/v1/products/'+id, {
 		method: 'GET',
 		headers: {
 			'x-auth-token': accessToken,
